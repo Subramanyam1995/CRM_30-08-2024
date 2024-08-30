@@ -10,17 +10,17 @@ import csv
 
 
 
-def update_name_and_phone_number():
+def update_name_and_phone_number(name_of_the_csv):
 
     
-    with open("Untitled spreadsheet - Sheet1.csv", 'r') as file:
+    with open(name_of_the_csv, 'r') as file:
         reader = csv.reader(file)
         for row in reader:
             print(row)
     
  
 
-update_name_and_phone_number()
+update_name_and_phone_number("Untitled spreadsheet - Sheet1.csv")
 
 # Code Depoy_1:
 
