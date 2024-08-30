@@ -8,6 +8,34 @@ import math
 import csv
 
 
+import pandas as pd
+
+# Read the first sheet of the Excel file
+df = pd.read_excel('Trail.xlsx')
+print(df)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def update_name_and_phone_number(name_of_the_csv):
@@ -15,12 +43,14 @@ def update_name_and_phone_number(name_of_the_csv):
     
     with open(name_of_the_csv, 'r') as file:
         reader = csv.reader(file)
-        for row in reader:
-            print(row)
+        with open("DB_Main.json","r") as jsons:
+            DB_main = json.load(jsons)
+            for row in reader:
+                pass#if DB_main[f"A{row[0][1:]}"]:
     
  
 
-update_name_and_phone_number("Untitled spreadsheet - Sheet1.csv")
+#update_name_and_phone_number("Untitled spreadsheet - Sheet1.csv")
 
 # Code Depoy_1:
 
@@ -40,4 +70,5 @@ def Create_database_for_10000():
         json.dump(DB, creating_db, indent=5, sort_keys=True)
 
 #Create_database_for_10000()
+
 
